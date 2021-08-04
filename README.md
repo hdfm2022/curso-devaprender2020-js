@@ -3,3 +3,6 @@ Curso Javascript Completo 2020 [Iniciantes] + 14 Mini-Projetos (youtube março/2
 
 # hist
 ago/2021 - Criado
+
+# info
+variaveis.js - let e const
