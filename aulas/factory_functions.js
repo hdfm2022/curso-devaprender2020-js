@@ -1,3 +1,4 @@
+// factory
 const celular1 = criarCelular("ASUS 2", {vertical: 155, horizontal: 75});
 console.log(celular1);
 celular1.ligar();
