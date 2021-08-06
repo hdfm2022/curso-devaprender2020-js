@@ -16,6 +16,7 @@ console.count("b");
 console.count("a");
 
 const nome = 'Henrique';
+
 const outra = `Oi '${nome}'
 
 ${5+2}
