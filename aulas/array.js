@@ -47,4 +47,17 @@ const result = marcas.find(function(marca) {
 });
 console.log(result);
 
+//arrow functions
+const result2 = marcas.find((marca) => {
+    return marca.nome === 'C';
+});
+console.log(result2);
 
+const numeros2 = [1,2,3,4,5,6];
+console.clear();
+console.log(numeros2);
+
+numeros2.pop();
+console.log(numeros2, 'after pop');
+// não terminei.
+console.error("nao terminei...");
