@@ -59,5 +59,20 @@ console.log(numeros2);
 
 numeros2.pop();
 console.log(numeros2, 'after pop');
+numeros2.shift();
+console.log(numeros2, 'after shift');
+console.warn(numeros2.splice(1, 2), 'retirados com splice');
+console.log(numeros2, 'after splice 1 2');
 // não terminei.
 console.error("nao terminei...");
+
+//numeros2 = []; // não pode ser retribuido pq é const
+// mesmo com let é ruim pq pq está referenciado em outro lugar
+
+const numeros3 = numeros2;
+numeros2.length = 0;
+console.log(numeros3);
+
+const numeros4 = [1,2,3,4,5];
+numeros4.splice(0, numeros4.length);
+console.log(numeros4);
