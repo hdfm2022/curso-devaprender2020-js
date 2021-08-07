@@ -4,8 +4,6 @@ class Endereco {
         this.cidade = cidade;
         this.cep = cep;
     }
-
-
 }
 
 function exibirEndereco(endereco) {
