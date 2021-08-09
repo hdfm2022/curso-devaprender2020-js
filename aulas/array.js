@@ -78,10 +78,12 @@ numeros4.splice(0, numeros4.length);
 console.log(numeros4);
 
 console.clear();
-const arr1 = [1,2,3,4];
+const arr1 = [{id:1}];
 const arr2 = [5,6,7];
 const combinado = arr1.concat(arr2)
 console.log(combinado);
 
-const cortado = combinado.slice(1, 3);
+combinado[0].id = 10;
+
+const cortado = combinado.slice(0, 3);
 console.log(cortado);
