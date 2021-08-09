@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Var x Ket x Const</title>
+</head>
+<body>
+    
+</body>
+<script>
+    console.warn("using var");
+    var nome1 = "Henrique";
+    function trocaNome1() {
+        nome1 = "Caroline";
+    }
+    trocaNome1();
+    console.log("nome1", nome1); // Caroline
+
+    var nome2 = "Henrique";
+    function trocaNome2() {
+        var nome2 = "Caroline";
+    }
+    trocaNome2();
+    console.log("nome2", nome2); // Henrique
+
+    console.log("nome3", nome3);
+    var nome3 = "Henrique";
+    // se fosse let, ia dar erro conforme abaixo.
+    //  let nome3 = "Henrique"; //Uncaught ReferenceError: Cannot access 'nome3' before initialization
+
+    var nome4 = "Henrique";
+    if (1+1 == 2) {
+        var nome4 = "Eduardo";
+        console.log("nome4 inside ", nome4);
+    }
+    console.log("nome4 outside", nome4);
+
+    console.warn("using let");
+    let nome5 = "Henrique";
+    if (1+1 == 2) {
+        let nome5 = "Eduardo";
+        console.log("nome5 inside ", nome5);
+    }
+    console.log("nome5 outside", nome5);
+
+    console.warn("using const");
+    const pessoa = {
+        nome: "Henrique",
+        sobrenome: "Macedo"
+    }
+
+    console.log(pessoa);
+    pessoa.sobrenome = 'Macedo2';
+    console.log(pessoa);
+
+    // pessoa = {nome: "Outro"};
+    // dá erro /\
+
+</script>
+</html>
