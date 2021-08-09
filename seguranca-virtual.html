@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Segurança Virtual</title>
+</head>
+<body>
+
+    <h1>  Bem vindo a festa</h1>
+    <input type="text" value="" placeholder="digite seu nome" id="nome">   
+
+    <br/>
+    <h1> Quem te convidou?</h1>
+    <input type="text" value="" placeholder="quem te convidou?" id="quem_convidou">
+    <input type="button" onclick="verificar();" id="button1" value="Verificar se posso entrar">
+
+    <br/>
+    <h1> Você está permitido?</h1>
+    <div id="result">(...)</div>
+</body>
+<script>
+
+    const listas = [
+       {dono: "Henrique", convidados: ['Caroline', 'Tiago', 'Matheus', 'Letícia'] }
+     , {dono: "Bernardo", convidados: ['Benjamin', 'Marina']}
+    ]
+
+    // document.getElementById("button1").addEventListener( "click", function () {
+    
+    // );
+
+    function verificar() {
+        let achou = false;
+        const nomeConvidado = document.getElementById('nome').value;
+        const nomeQuemConvidou = document.getElementById('quem_convidou').value;
+
+        listas.forEach(function(lista) {
+            if (lista.dono == nomeQuemConvidou) {
+                if (lista.convidados.includes(nomeConvidado)) {
+                    achou = true;
+                    console.log('achou');
+                }
+
+            } else {
+                // console.warn("não bate o nome com o dono", lista.dono);
+            }
+        });
+        if (achou) {
+            document.getElementById('result').innerHTML = 'Pode entrar';
+        } else {
+            document.getElementById('result').innerHTML = 'Nao pode entrar';
+        }
+    } 
+</script>
+</html>
+
