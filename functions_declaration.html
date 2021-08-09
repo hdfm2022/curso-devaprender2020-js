@@ -9,12 +9,28 @@
 <body>
 </body>
 <script>
-    console.log("oi");
 
-    testeExpression();
+    testeExpression(); // 1
+
+    //se fosse function daria certo..
+    var testeExpression = function() {
+        console.log("testando 2");
+    }
+
+    testeExpression(); // 2
 
     var testeExpression = function() {
-        console.log("testando");
+        console.log("testando 3");
+    }
+
+    testeExpression(); // 3
+
+    function testeExpression() {
+        console.log("testando 0");
+    }
+    
+    function testeExpression() {
+        console.log("testando 1");
     }
 </script>
 </html>
